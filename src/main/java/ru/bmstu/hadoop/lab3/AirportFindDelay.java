@@ -1,6 +1,7 @@
 package ru.bmstu.hadoop.lab3;
 
 import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 
@@ -26,6 +27,14 @@ public class AirportFindDelay {
     public static final String REGEX_QUOTES = "^\"+|\"+$";
     public static final String REGEX_CVS_SPLIT = ",";
 
+    private static boolean isFirstLine(String str) {
+        return str.contains(FIRST_STRING);
+    }
+
+    private static String removeQuotes(String str) {
+        return str.replaceAll(REGEX_QUOTES, EMPTY_STR);
+    }
+
     public static void main(String[] args) {
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
@@ -33,7 +42,14 @@ public class AirportFindDelay {
         JavaRDD<String> airports = sc.textFile("/Airports.csv");
         JavaRDD<String> flights = sc.textFile("/Flights.csv");
 
-        JavaRDD<String> flightsStr = airports.filter(str -> !str.contains(FIRST_STRING)).filter(str -> str.contains("fa"));
+        JavaPairRDD<Integer, String> flightsStr = airports
+                .filter(str -> !isFirstLine(str))
+                .mapToPair(str -> {
+                    String[] values = str.split(REGEX_CVS_SPLIT);
+                    Integer
+                })
+
+
 
         flightsStr.saveAsTextFile("output");
     }
