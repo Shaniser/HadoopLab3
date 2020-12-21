@@ -53,6 +53,10 @@ public class AirportFindDelay {
         return str.split(REGEX_CVS_SPLIT);
     }
 
+    private static float getCancelCode(String strCode) {
+        return Float.parseFloat(strCode);
+    }
+
     public static class FlightSerializable implements Serializable {
         private boolean isCanceled;
         private float delayTime;
@@ -95,7 +99,7 @@ public class AirportFindDelay {
                     Integer originalAirportId = Integer.parseInt(values[AIRPORT_DELAY_COLUMN_ID]);
                     Integer destinationAirportId = Integer.parseInt(values[AIRPORT_DELAY_COLUMN_ID]);
 
-                    boolean isCanceled =
+                    boolean isCanceled = isCanceled()
                 });
 
 
