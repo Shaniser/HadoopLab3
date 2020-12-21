@@ -41,6 +41,10 @@ public class AirportFindDelay {
         return str.contains(FLIGHTS_FIRST_STRING);
     }
 
+    private static boolean isCanceled(float cancelled) {
+        return cancelled == CANCEL_CODE;
+    }
+
     private static String removeQuotes(String str) {
         return str.replaceAll(REGEX_QUOTES, EMPTY_STR);
     }
