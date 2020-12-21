@@ -30,6 +30,6 @@ public class AirportFindDelay {
 
         JavaRDD<String> flightsStr = flights.filter(t -> t.equals(FIRST_STRING));
 
-        flightsStr.saveAsTextFile("outputTest");
+        flightsStr.saveAsTextFile("output");
     }
 }
