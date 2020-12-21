@@ -12,5 +12,7 @@ public class AirportFindDelay {
         JavaRDD<String> airports = sc.textFile("Airports.csv");
         JavaRDD<String> flights = sc.textFile("Flights.csv");
 
+
+        
     }
 }
