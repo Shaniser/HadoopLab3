@@ -10,7 +10,7 @@ public class AirportFindDelay {
         JavaSparkContext sc = new JavaSparkContext(conf);
 
         JavaRDD<String> airports = sc.textFile("Airports.csv");
-        JavaRDD<String> flights = sc.textFile("Airports.csv");
+        JavaRDD<String> flights = sc.textFile("Flights.csv");
 
     }
 }
