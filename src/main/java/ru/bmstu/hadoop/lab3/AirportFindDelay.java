@@ -19,7 +19,9 @@ public class AirportFindDelay {
     public static final int CANCEL_CODE_INDEX = 19;
     public static final int ID_INDEX = 14;
     public static final int ERROR_CODE = 1;
-    public static final String DELIMITER = ",";
+
+    public static final String REGEX_QUOTES = "^\"+|\"+$";
+    public static final String REGEX_CVS_SPLIT = ",";
 
     public static void main(String[] args) {
         SparkConf conf = new SparkConf().setAppName("lab3");
