@@ -35,4 +35,6 @@ public class FlightInfo {
                 info.cancelledCount + cancelledCount,
                 info.delayedCount + delayedCount);
     }
+
+    
 }
