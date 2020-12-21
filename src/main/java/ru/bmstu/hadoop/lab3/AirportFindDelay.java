@@ -20,6 +20,7 @@ public class AirportFindDelay {
     public static final int CANCEL_CODE_INDEX = 19;
     public static final int ID_INDEX = 14;
     public static final int ERROR_CODE = 1;
+    public static final int AIRPORT_ID_COLUMN = 0;
 
     public static final String EMPTY_STR = "";
 
@@ -46,7 +47,7 @@ public class AirportFindDelay {
                 .filter(str -> !isFirstLine(str))
                 .mapToPair(str -> {
                     String[] values = str.split(REGEX_CVS_SPLIT);
-                    Integer
+                    Integer id = Integer.parseInt(removeQuotes(values[id]))
                 })
 
 
