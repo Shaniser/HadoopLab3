@@ -28,7 +28,7 @@ public class AirportFindDelay {
         JavaRDD<String> airports = sc.textFile("/Airports.csv");
         JavaRDD<String> flights = sc.textFile("/Flights.csv");
 
-        JavaRDD<String> flightsStr = flights.filter(t -> t.equals(FIRST_STRING));
+        JavaRDD<String> flightsStr = airports.filter(str -> !str.contains(FIRST_STRING));
 
         flightsStr.saveAsTextFile("output");
     }
