@@ -22,7 +22,7 @@ public class AirportFindDelay {
     public static final int ID_INDEX = 14;
     public static final int ERROR_CODE = 1;
     public static final int AIRPORT_ID_COLUMN = 0;
-    public static final int AIRPORT_NAME_COLUMN = 0;
+    public static final int AIRPORT_NAME_COLUMN = 1;
 
     public static final String EMPTY_STR = "";
 
@@ -53,7 +53,7 @@ public class AirportFindDelay {
                     String name = values[AIRPORT_NAME_COLUMN];
 
                     return new Tuple2<>(id, name);
-                })
+                });
 
 
 
