@@ -4,6 +4,7 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import scala.Serializable;
 import scala.Tuple2;
 
 /*
@@ -38,6 +39,16 @@ public class AirportFindDelay {
         return str.replaceAll(REGEX_QUOTES, EMPTY_STR);
     }
 
+    public static class FlightSerializable implements Serializable {
+        private boolean isCanceled;
+        private float delayTime;
+
+        FlightSerializable(float delayTime, boolean isCanceled) {
+            this.delayTime = delayTime;
+            this.isCanceled = isCanceled;
+        }
+    }
+
     public static void main(String[] args) {
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
@@ -46,6 +57,16 @@ public class AirportFindDelay {
         JavaRDD<String> flights = sc.textFile("/Flights.csv");
 
         JavaPairRDD<Integer, String> flightsStr = airports
+                .filter(str -> !isFirstLine(str))
+                .mapToPair(str -> {
+                    String[] values = str.split(REGEX_CVS_SPLIT);
+                    Integer id = Integer.parseInt(removeQuotes(values[AIRPORT_ID_COLUMN]));
+                    String name = values[AIRPORT_NAME_COLUMN];
+
+                    return new Tuple2<>(id, name);
+                });
+
+        JavaPairRDD<Tuple2<Integer, Integer>> flightsStr = airports
                 .filter(str -> !isFirstLine(str))
                 .mapToPair(str -> {
                     String[] values = str.split(REGEX_CVS_SPLIT);
