@@ -36,7 +36,7 @@ public class FlightInfo {
                 info.delayedCount + delayedCount);
     }
 
-    public static FlightInfo addValue(FlightInfo first, FlightInfo second) {
+    public static FlightInfo add(FlightInfo first, FlightInfo second) {
         return new FlightInfo(
                 Math.max(first.maxDelay, second.maxDelay),
                 first.flightCount + second.flightCount,
