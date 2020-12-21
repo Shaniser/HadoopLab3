@@ -80,7 +80,7 @@ public class AirportFindDelay {
                 });
 
         JavaPairRDD<Tuple2<Integer, Integer>, FlightSerializable> flightInfo = flights
-                .filter(str -> !is(str))
+                .filter(str -> !isFlightsFirstLine(str))
                 .mapToPair(str -> {
                     String[] values = str.split(REGEX_CVS_SPLIT);
                     Integer id = Integer.parseInt(removeQuotes(values[AIRPORT_ID_COLUMN]));
