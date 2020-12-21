@@ -29,12 +29,17 @@ public class AirportFindDelay {
     public static final float CANCEL_CODE = 1;
     public static final int CANCEL_CODE_COLUMN = 19;
     public static final float ZERO_TIME = 0;
+    public static float maxPercent = 100;
 
     public static final String EMPTY_STR = "";
 
     // Regexes
     public static final String REGEX_QUOTES = "^\"+|\"+$";
     public static final String REGEX_CVS_SPLIT = ",";
+
+    // Strings
+    public static final String MAX_DELAY_STR = "Max delay is ";
+    public static final String FLIGHTS_STR = "Flights count is ";
 
     private static boolean isAirportsFirstLine(String str) {
         return str.contains(AIRPORTS_FIRST_STRING);
@@ -107,6 +112,25 @@ public class AirportFindDelay {
                         ),
                         FlightInfo::add
                 );
+
+        JavaPairRDD<Tuple2<Integer, Integer>, String> flightInfoStr =
+                flightCombined.mapToPair(
+                        value -> {
+                            float cancelledPercent = 0;
+                            float delayedPercent = 0;
+
+                            if (value._2.getDelayedCount() != 0) {
+                                delayedPercent = (float) value._2.getDelayedCount() / value._2.getFlightCount() * maxPercent;
+                            }
+
+                            if (value._2.getCancelledCount() != 0) {
+                                cancelledPercent = (float) value._2.getCancelledCount() / value._2.getFlightCount() * maxPercent;
+                            }
+
+                            StringBuilder infoInStrBuilder = new StringBuilder();
+
+                        }
+                )
 
         flightsStr.saveAsTextFile("output");
     }
