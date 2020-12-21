@@ -11,7 +11,7 @@ public class AirportFindDelay {
     public static final int ID_INDEX = 14;
     public static final int ERROR_CODE = 1;
     public static final String DELIMITER = ",";
-    
+
     public static void main(String[] args) {
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
@@ -19,7 +19,8 @@ public class AirportFindDelay {
         JavaRDD<String> airports = sc.textFile("Airports.csv");
         JavaRDD<String> flights = sc.textFile("Flights.csv");
 
+        JavaRDD<String> flightsStr = flights.filter(t -> t.equals(FIRST_STRING));
 
-
+        flightsStr.saveAsTextFile("outputTest");
     }
 }
