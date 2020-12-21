@@ -4,9 +4,12 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.broadcast.Broadcast;
 import scala.Int;
 import scala.Serializable;
 import scala.Tuple2;
+
+import java.util.Map;
 
 /*
 Start project
@@ -44,6 +47,9 @@ public class AirportFindDelay {
     public static final String FLIGHTS_DELAYED_STR = "Delayed flights count is ";
     public static final String DELAYED_PERCENT_STR = "Delayed flights percent is ";
     public static final String CANCELLED_PERCENT_STR = "Cancelled flights percent is ";
+    public static final String FROM_STR = "From: ";
+    public static final String TO_STR = " to: ";
+    public static final String NEW_STR = " \n";
 
     private static boolean isAirportsFirstLine(String str) {
         return str.contains(AIRPORTS_FIRST_STRING);
@@ -76,7 +82,7 @@ public class AirportFindDelay {
         JavaRDD<String> airports = sc.textFile("/Airports.csv");
         JavaRDD<String> flights = sc.textFile("/Flights.csv");
 
-        JavaPairRDD<Integer, String> flightsStr = airports
+        JavaPairRDD<Integer, String> airportInfo = airports
                 .filter(str -> !isAirportsFirstLine(str))
                 .mapToPair(str -> {
                     String[] values = getValues(str);
@@ -145,8 +151,21 @@ public class AirportFindDelay {
                                     cancelledPercent;
                             return new Tuple2<>(value._1, infoStrBuilder);
                         }
-                )
+                );
 
-        flightsStr.saveAsTextFile("output");
+        final Broadcast<Map<Integer, String>> airportBroadcast = sc.broadcast(airportInfo.collectAsMap());
+
+        JavaRDD<String> outputInfo = flightInfoStr.map(
+                value -> {
+                    Map<Integer, String> name = airportBroadcast.getValue();
+
+                    String from = name.get(value._1._1);
+                    String to = name.get(value._1._2);
+
+                    return
+                }
+        )
+
+        airportInfo.saveAsTextFile("output");
     }
 }
