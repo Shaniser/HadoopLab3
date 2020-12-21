@@ -100,7 +100,7 @@ public class AirportFindDelay {
                                 value.isCanceled() ? 1 : 0,
                                 value.getDelayTime() > ZERO_TIME ? 1 : 0
                         ),
-                        (flight, value) -> FlightInfo.addValue(flight,
+                        (flight, value) -> FlightInfo.add(flight,
                                 value.getDelayTime(),
                                 value.isCanceled() ? 1 : 0,
                                 value.getDelayTime() > ZERO_TIME ? 1 : 0
