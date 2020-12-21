@@ -1,6 +1,8 @@
 package ru.bmstu.hadoop.lab3;
 
-public class FlightInfo {
+import java.io.Serializable;
+
+public class FlightInfo implements Serializable {
     private final float maxDelay;
     private final int flightCount;
     private final int cancelledCount;
