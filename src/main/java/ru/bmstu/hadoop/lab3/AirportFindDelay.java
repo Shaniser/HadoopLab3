@@ -32,8 +32,12 @@ public class AirportFindDelay {
     public static final String REGEX_QUOTES = "^\"+|\"+$";
     public static final String REGEX_CVS_SPLIT = ",";
 
-    private static boolean isFirstLine(String str) {
+    private static boolean isAirportsFirstLine(String str) {
         return str.contains(AIRPORTS_FIRST_STRING);
+    }
+
+    private static boolean isFlightsFirstLine(String str) {
+        return str.contains(FLIGHTS_FIRST_STRING);
     }
 
     private static String removeQuotes(String str) {
@@ -66,7 +70,7 @@ public class AirportFindDelay {
         JavaRDD<String> flights = sc.textFile("/Flights.csv");
 
         JavaPairRDD<Integer, String> flightsStr = airports
-                .filter(str -> !isFirstLine(str))
+                .filter(str -> !isAirportsFirstLine(str))
                 .mapToPair(str -> {
                     String[] values = str.split(REGEX_CVS_SPLIT);
                     Integer id = Integer.parseInt(removeQuotes(values[AIRPORT_ID_COLUMN]));
@@ -76,7 +80,7 @@ public class AirportFindDelay {
                 });
 
         JavaPairRDD<Tuple2<Integer, Integer>, FlightSerializable> flightInfo = flights
-                .filter(str -> !isFirstLine(str))
+                .filter(str -> !is(str))
                 .mapToPair(str -> {
                     String[] values = str.split(REGEX_CVS_SPLIT);
                     Integer id = Integer.parseInt(removeQuotes(values[AIRPORT_ID_COLUMN]));
