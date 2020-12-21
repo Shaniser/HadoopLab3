@@ -141,14 +141,19 @@ public class AirportFindDelay {
 
                             String infoStrBuilder = MAX_DELAY_STR +
                                     value._2.getMaxDelay() +
+                                    NEW_STR +
                                     FLIGHTS_STR +
                                     value._2.getFlightCount() +
+                                    NEW_STR +
                                     FLIGHTS_CANCELLED_STR +
                                     value._2.getCancelledCount() +
+                                    NEW_STR +
                                     FLIGHTS_DELAYED_STR +
                                     value._2.getMaxDelay() +
+                                    NEW_STR +
                                     DELAYED_PERCENT_STR +
                                     delayedPercent +
+                                    NEW_STR +
                                     CANCELLED_PERCENT_STR +
                                     cancelledPercent;
                             return new Tuple2<>(value._1, infoStrBuilder);
