@@ -1,0 +1,369 @@
+stopping yarn daemons
+stopping resourcemanager
+localhost: stopping nodemanager
+localhost: nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+no proxyserver to stop
+20/12/21 15:32:16 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Stopping namenodes on [localhost]
+localhost: stopping namenode
+localhost: stopping datanode
+Stopping secondary namenodes [0.0.0.0]
+0.0.0.0: stopping secondarynamenode
+20/12/21 15:32:34 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rm: *: No such file or directory
+rm: *: No such file or directory
+20/12/21 15:32:35 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = MBPShaniser.local/192.168.31.147
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 2.10.1
+STARTUP_MSG:   classpath = /Users/shaniser/hadoop-2.10.1/etc/hadoop:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/activation-1.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/woodstox-core-5.0.3.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-configuration-1.6.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/htrace-core4-4.1.0-incubating.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/junit-4.11.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/snappy-java-1.0.5.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/stax-api-1.0-2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/apacheds-i18n-2.0.0-M15.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/hadoop-annotations-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/mockito-all-1.8.5.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/slf4j-api-1.7.25.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/spotbugs-annotations-3.1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-logging-1.1.3.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/avro-1.7.7.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/zookeeper-3.4.14.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jetty-sslengine-6.1.26.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jersey-json-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/log4j-1.2.17.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-cli-1.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-digester-1.8.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/servlet-api-2.5.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jcip-annotations-1.0-1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/xmlenc-0.52.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jetty-util-6.1.26.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/httpclient-4.5.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/nimbus-jose-jwt-7.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/guava-11.0.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/curator-framework-2.13.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/curator-client-2.13.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-io-2.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/stax2-api-3.1.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jersey-core-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jsp-api-2.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-codec-1.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jetty-6.1.26.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/audience-annotations-0.5.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jersey-server-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/paranamer-2.3.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-collections-3.2.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jettison-1.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/asm-3.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/netty-3.10.6.Final.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/api-asn1-api-1.0.0-M20.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/hamcrest-core-1.3.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-compress-1.19.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/curator-recipes-2.13.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/hadoop-auth-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-beanutils-1.9.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/httpcore-4.4.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/json-smart-1.3.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/api-util-1.0.0-M20.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jsch-0.1.55.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-net-3.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/gson-2.2.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jets3t-0.9.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-lang-2.6.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jsr305-3.0.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-math3-3.1.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/lib/commons-lang3-3.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/hadoop-nfs-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/hadoop-common-2.10.1-tests.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/common/hadoop-common-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/xercesImpl-2.12.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/htrace-core4-4.1.0-incubating.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/jackson-core-2.9.10.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/guava-11.0.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/netty-all-4.1.50.Final.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/okio-1.6.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/commons-io-2.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/okhttp-2.7.5.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/xml-apis-1.4.01.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/asm-3.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/netty-3.10.6.Final.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/jackson-annotations-2.9.10.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/hadoop-hdfs-client-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/jsr305-3.0.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/jackson-databind-2.9.10.6.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/hadoop-hdfs-rbf-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/hadoop-hdfs-rbf-2.10.1-tests.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/hadoop-hdfs-client-2.10.1-tests.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/hadoop-hdfs-native-client-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/hadoop-hdfs-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/hadoop-hdfs-2.10.1-tests.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/hadoop-hdfs-nfs-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/hadoop-hdfs-native-client-2.10.1-tests.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/hdfs/hadoop-hdfs-client-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/activation-1.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/woodstox-core-5.0.3.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/aopalliance-1.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-configuration-1.6.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/htrace-core4-4.1.0-incubating.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/snappy-java-1.0.5.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/apacheds-i18n-2.0.0-M15.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/java-util-1.9.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jackson-jaxrs-1.9.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/spotbugs-annotations-3.1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/avro-1.7.7.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/zookeeper-3.4.14.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jetty-sslengine-6.1.26.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jersey-json-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/log4j-1.2.17.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-cli-1.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-digester-1.8.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/servlet-api-2.5.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jcip-annotations-1.0-1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/xmlenc-0.52.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jackson-xc-1.9.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/fst-2.50.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/httpclient-4.5.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/nimbus-jose-jwt-7.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/guava-11.0.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/curator-framework-2.13.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/curator-client-2.13.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-io-2.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jackson-core-asl-1.9.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/stax2-api-3.1.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jersey-core-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jsp-api-2.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-codec-1.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jetty-6.1.26.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/audience-annotations-0.5.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jersey-server-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/guice-3.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/java-xmlbuilder-0.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/metrics-core-3.0.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jersey-client-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/paranamer-2.3.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-collections-3.2.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jettison-1.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/asm-3.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/netty-3.10.6.Final.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/api-asn1-api-1.0.0-M20.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-compress-1.19.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/curator-recipes-2.13.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-beanutils-1.9.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/httpcore-4.4.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/json-smart-1.3.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/api-util-1.0.0-M20.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jsch-0.1.55.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-net-3.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/gson-2.2.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jets3t-0.9.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-lang-2.6.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/HikariCP-java7-2.4.12.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/json-io-2.5.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jsr305-3.0.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/jackson-mapper-asl-1.9.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-math3-3.1.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/commons-lang3-3.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/lib/javax.inject-1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-server-tests-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-server-router-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-registry-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-common-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-client-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-server-common-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/yarn/hadoop-yarn-api-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/junit-4.11.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/snappy-java-1.0.5.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/hadoop-annotations-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/avro-1.7.7.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/jackson-core-asl-1.9.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/guice-3.0.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/asm-3.2.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/netty-3.10.6.Final.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/commons-compress-1.19.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/leveldbjni-all-1.8.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.9.13.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/lib/javax.inject-1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.10.1-tests.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.10.1.jar:/Users/shaniser/hadoop-2.10.1/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.10.1.jar:/contrib/capacity-scheduler/*.jar
+STARTUP_MSG:   build = https://github.com/apache/hadoop -r 1827467c9a56f133025f28557bfc2c562d78e816; compiled by 'centos' on 2020-09-14T13:17Z
+STARTUP_MSG:   java = 1.8.0_261
+************************************************************/
+20/12/21 15:32:35 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+20/12/21 15:32:35 INFO namenode.NameNode: createNameNode [-format]
+20/12/21 15:32:35 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Formatting using clusterid: CID-d3cef288-513a-4cd4-8845-c4aba1ff405d
+20/12/21 15:32:36 INFO namenode.FSEditLog: Edit logging is async:true
+20/12/21 15:32:36 INFO namenode.FSNamesystem: KeyProvider: null
+20/12/21 15:32:36 INFO namenode.FSNamesystem: fsLock is fair: true
+20/12/21 15:32:36 INFO namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+20/12/21 15:32:36 INFO namenode.FSNamesystem: fsOwner             = shaniser (auth:SIMPLE)
+20/12/21 15:32:36 INFO namenode.FSNamesystem: supergroup          = supergroup
+20/12/21 15:32:36 INFO namenode.FSNamesystem: isPermissionEnabled = true
+20/12/21 15:32:36 INFO namenode.FSNamesystem: HA Enabled: false
+20/12/21 15:32:36 INFO common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+20/12/21 15:32:36 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+20/12/21 15:32:36 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+20/12/21 15:32:36 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+20/12/21 15:32:36 INFO blockmanagement.BlockManager: The block deletion will start around 2020 дек 21 15:32:36
+20/12/21 15:32:36 INFO util.GSet: Computing capacity for map BlocksMap
+20/12/21 15:32:36 INFO util.GSet: VM type       = 64-bit
+20/12/21 15:32:36 INFO util.GSet: 2.0% max memory 889 MB = 17.8 MB
+20/12/21 15:32:36 INFO util.GSet: capacity      = 2^21 = 2097152 entries
+20/12/21 15:32:36 INFO blockmanagement.BlockManager: dfs.block.access.token.enable=false
+20/12/21 15:32:36 WARN conf.Configuration: No unit for dfs.heartbeat.interval(3) assuming SECONDS
+20/12/21 15:32:36 WARN conf.Configuration: No unit for dfs.namenode.safemode.extension(30000) assuming MILLISECONDS
+20/12/21 15:32:36 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+20/12/21 15:32:36 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+20/12/21 15:32:36 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+20/12/21 15:32:36 INFO blockmanagement.BlockManager: defaultReplication         = 1
+20/12/21 15:32:36 INFO blockmanagement.BlockManager: maxReplication             = 512
+20/12/21 15:32:36 INFO blockmanagement.BlockManager: minReplication             = 1
+20/12/21 15:32:36 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+20/12/21 15:32:36 INFO blockmanagement.BlockManager: replicationRecheckInterval = 3000
+20/12/21 15:32:36 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+20/12/21 15:32:36 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+20/12/21 15:32:36 INFO namenode.FSNamesystem: Append Enabled: true
+20/12/21 15:32:36 INFO namenode.FSDirectory: GLOBAL serial map: bits=24 maxEntries=16777215
+20/12/21 15:32:36 INFO util.GSet: Computing capacity for map INodeMap
+20/12/21 15:32:36 INFO util.GSet: VM type       = 64-bit
+20/12/21 15:32:36 INFO util.GSet: 1.0% max memory 889 MB = 8.9 MB
+20/12/21 15:32:36 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+20/12/21 15:32:36 INFO namenode.FSDirectory: ACLs enabled? false
+20/12/21 15:32:36 INFO namenode.FSDirectory: XAttrs enabled? true
+20/12/21 15:32:36 INFO namenode.NameNode: Caching file names occurring more than 10 times
+20/12/21 15:32:36 INFO snapshot.SnapshotManager: Loaded config captureOpenFiles: falseskipCaptureAccessTimeOnlyChange: false
+20/12/21 15:32:36 INFO util.GSet: Computing capacity for map cachedBlocks
+20/12/21 15:32:36 INFO util.GSet: VM type       = 64-bit
+20/12/21 15:32:36 INFO util.GSet: 0.25% max memory 889 MB = 2.2 MB
+20/12/21 15:32:36 INFO util.GSet: capacity      = 2^18 = 262144 entries
+20/12/21 15:32:36 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+20/12/21 15:32:36 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+20/12/21 15:32:36 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+20/12/21 15:32:36 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+20/12/21 15:32:36 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+20/12/21 15:32:36 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+20/12/21 15:32:36 INFO util.GSet: VM type       = 64-bit
+20/12/21 15:32:36 INFO util.GSet: 0.029999999329447746% max memory 889 MB = 273.1 KB
+20/12/21 15:32:36 INFO util.GSet: capacity      = 2^15 = 32768 entries
+Re-format filesystem in Storage Directory /Users/shaniser/hdata/namenode ? (Y or N) 20/12/21 15:32:36 INFO namenode.FSImage: Allocated new BlockPoolId: BP-1788814284-192.168.31.147-1608553956490
+20/12/21 15:32:36 INFO common.Storage: Storage directory /Users/shaniser/hdata/namenode has been successfully formatted.
+20/12/21 15:32:36 INFO namenode.FSImageFormatProtobuf: Saving image file /Users/shaniser/hdata/namenode/current/fsimage.ckpt_0000000000000000000 using no compression
+20/12/21 15:32:36 INFO namenode.FSImageFormatProtobuf: Image file /Users/shaniser/hdata/namenode/current/fsimage.ckpt_0000000000000000000 of size 326 bytes saved in 0 seconds .
+20/12/21 15:32:36 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+20/12/21 15:32:36 INFO namenode.FSImage: FSImageSaver clean checkpoint: txid = 0 when meet shutdown.
+20/12/21 15:32:36 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at MBPShaniser.local/192.168.31.147
+************************************************************/
+20/12/21 15:32:37 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting namenodes on [localhost]
+localhost: starting namenode, logging to /Users/shaniser/hadoop-2.10.1/logs/hadoop-shaniser-namenode-MBPShaniser.local.out
+localhost: starting datanode, logging to /Users/shaniser/hadoop-2.10.1/logs/hadoop-shaniser-datanode-MBPShaniser.local.out
+Starting secondary namenodes [0.0.0.0]
+0.0.0.0: starting secondarynamenode, logging to /Users/shaniser/hadoop-2.10.1/logs/hadoop-shaniser-secondarynamenode-MBPShaniser.local.out
+20/12/21 15:32:52 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+starting yarn daemons
+starting resourcemanager, logging to /Users/shaniser/hadoop-2.10.1/logs/yarn-shaniser-resourcemanager-MBPShaniser.local.out
+localhost: starting nodemanager, logging to /Users/shaniser/hadoop-2.10.1/logs/yarn-shaniser-nodemanager-MBPShaniser.local.out
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for spark-examples:spark-examples:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 32, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------------------< spark-examples:spark-examples >--------------------
+[INFO] Building spark-examples 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spark-examples ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ spark-examples ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to /Users/shaniser/Desktop/Hadoop/HadoopLab3/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spark-examples ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/shaniser/Desktop/Hadoop/HadoopLab3/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ spark-examples ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ spark-examples ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ spark-examples ---
+[INFO] Building jar: /Users/shaniser/Desktop/Hadoop/HadoopLab3/target/spark-examples-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.818 s
+[INFO] Finished at: 2020-12-21T15:33:03+03:00
+[INFO] ------------------------------------------------------------------------
+20/12/21 15:33:03 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Warning: Master yarn-client is deprecated since 2.0. Please use master "yarn" with specified deploy mode instead.
+20/12/21 15:33:06 WARN util.Utils: Your hostname, MBPShaniser.local resolves to a loopback address: 127.0.0.1; using 192.168.31.147 instead (on interface en0)
+20/12/21 15:33:06 WARN util.Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/12/21 15:33:07 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/12/21 15:33:07 INFO spark.SparkContext: Running Spark version 2.4.7
+20/12/21 15:33:07 INFO spark.SparkContext: Submitted application: lab3
+20/12/21 15:33:07 INFO spark.SecurityManager: Changing view acls to: shaniser
+20/12/21 15:33:07 INFO spark.SecurityManager: Changing modify acls to: shaniser
+20/12/21 15:33:07 INFO spark.SecurityManager: Changing view acls groups to: 
+20/12/21 15:33:07 INFO spark.SecurityManager: Changing modify acls groups to: 
+20/12/21 15:33:07 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(shaniser); groups with view permissions: Set(); users  with modify permissions: Set(shaniser); groups with modify permissions: Set()
+20/12/21 15:33:07 INFO util.Utils: Successfully started service 'sparkDriver' on port 53605.
+20/12/21 15:33:08 INFO spark.SparkEnv: Registering MapOutputTracker
+20/12/21 15:33:08 INFO spark.SparkEnv: Registering BlockManagerMaster
+20/12/21 15:33:08 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/12/21 15:33:08 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/12/21 15:33:08 INFO storage.DiskBlockManager: Created local directory at /private/var/folders/t7/1g88wz7j1nxf02brk14l7gp40000gn/T/blockmgr-600844c5-7b91-428f-ae28-5081edb76e72
+20/12/21 15:33:08 INFO memory.MemoryStore: MemoryStore started with capacity 366.3 MB
+20/12/21 15:33:08 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+20/12/21 15:33:08 INFO util.log: Logging initialized @2484ms
+20/12/21 15:33:08 INFO server.Server: jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+20/12/21 15:33:08 INFO server.Server: Started @2596ms
+20/12/21 15:33:08 INFO server.AbstractConnector: Started ServerConnector@4d4d48a6{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+20/12/21 15:33:08 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@492fc69e{/jobs,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3b718392{/jobs/json,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6d2260db{/jobs/job,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@49bf29c6{/jobs/job/json,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7ee55e70{/stages,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3fcdcf{/stages/json,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7668d560{/stages/stage,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6c44052e{/stages/stage/json,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5c371e13{/stages/pool,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@530a8454{/stages/pool/json,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1e34c607{/storage,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5215cd9a{/storage/json,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@36b6964d{/storage/rdd,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@31198ceb{/storage/rdd/json,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@9257031{/environment,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@75201592{/environment/json,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7726e185{/executors,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@aa5455e{/executors/json,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@282308c3{/executors/threadDump,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5dda14d0{/executors/threadDump/json,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1db0ec27{/static,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@54e81b21{/,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@38d5b107{/api,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@450794b4{/jobs/job/kill,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@273c947f{/stages/stage/kill,null,AVAILABLE,@Spark}
+20/12/21 15:33:08 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.31.147:4040
+20/12/21 15:33:08 INFO spark.SparkContext: Added JAR file:/Users/shaniser/Desktop/Hadoop/HadoopLab3/target/spark-examples-1.0-SNAPSHOT.jar at spark://192.168.31.147:53605/jars/spark-examples-1.0-SNAPSHOT.jar with timestamp 1608553988577
+20/12/21 15:33:09 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/12/21 15:33:09 INFO yarn.Client: Requesting a new application from cluster with 1 NodeManagers
+20/12/21 15:33:09 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+20/12/21 15:33:09 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+20/12/21 15:33:09 INFO yarn.Client: Setting up container launch context for our AM
+20/12/21 15:33:09 INFO yarn.Client: Setting up the launch environment for our AM container
+20/12/21 15:33:09 INFO yarn.Client: Preparing resources for our AM container
+20/12/21 15:33:10 WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+20/12/21 15:33:14 INFO yarn.Client: Uploading resource file:/private/var/folders/t7/1g88wz7j1nxf02brk14l7gp40000gn/T/spark-fc1eeb24-f64c-424a-b24d-0ea0a689a5c7/__spark_libs__7636389423929779377.zip -> hdfs://localhost:9000/user/shaniser/.sparkStaging/application_1608553977526_0001/__spark_libs__7636389423929779377.zip
+20/12/21 15:33:16 INFO yarn.Client: Uploading resource file:/private/var/folders/t7/1g88wz7j1nxf02brk14l7gp40000gn/T/spark-fc1eeb24-f64c-424a-b24d-0ea0a689a5c7/__spark_conf__4479297313380227357.zip -> hdfs://localhost:9000/user/shaniser/.sparkStaging/application_1608553977526_0001/__spark_conf__.zip
+20/12/21 15:33:16 INFO spark.SecurityManager: Changing view acls to: shaniser
+20/12/21 15:33:16 INFO spark.SecurityManager: Changing modify acls to: shaniser
+20/12/21 15:33:16 INFO spark.SecurityManager: Changing view acls groups to: 
+20/12/21 15:33:16 INFO spark.SecurityManager: Changing modify acls groups to: 
+20/12/21 15:33:16 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(shaniser); groups with view permissions: Set(); users  with modify permissions: Set(shaniser); groups with modify permissions: Set()
+20/12/21 15:33:17 INFO yarn.Client: Submitting application application_1608553977526_0001 to ResourceManager
+20/12/21 15:33:17 INFO impl.YarnClientImpl: Submitted application application_1608553977526_0001
+20/12/21 15:33:17 INFO cluster.SchedulerExtensionServices: Starting Yarn extension services with app application_1608553977526_0001 and attemptId None
+20/12/21 15:33:18 INFO yarn.Client: Application report for application_1608553977526_0001 (state: ACCEPTED)
+20/12/21 15:33:18 INFO yarn.Client: 
+         client token: N/A
+         diagnostics: [Пн дек 21 15:33:18 +0300 2020] Scheduler has assigned a container for AM, waiting for AM container to be launched
+         ApplicationMaster host: N/A
+         ApplicationMaster RPC port: -1
+         queue: default
+         start time: 1608553997375
+         final status: UNDEFINED
+         tracking URL: http://localhost:8088/proxy/application_1608553977526_0001/
+         user: shaniser
+20/12/21 15:33:19 INFO yarn.Client: Application report for application_1608553977526_0001 (state: ACCEPTED)
+20/12/21 15:33:20 INFO yarn.Client: Application report for application_1608553977526_0001 (state: ACCEPTED)
+20/12/21 15:33:21 INFO yarn.Client: Application report for application_1608553977526_0001 (state: ACCEPTED)
+20/12/21 15:33:22 INFO yarn.Client: Application report for application_1608553977526_0001 (state: ACCEPTED)
+20/12/21 15:33:23 INFO yarn.Client: Application report for application_1608553977526_0001 (state: ACCEPTED)
+20/12/21 15:33:24 INFO yarn.Client: Application report for application_1608553977526_0001 (state: ACCEPTED)
+20/12/21 15:33:25 INFO yarn.Client: Application report for application_1608553977526_0001 (state: ACCEPTED)
+20/12/21 15:33:26 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> localhost, PROXY_URI_BASES -> http://localhost:8088/proxy/application_1608553977526_0001), /proxy/application_1608553977526_0001
+20/12/21 15:33:26 INFO yarn.Client: Application report for application_1608553977526_0001 (state: RUNNING)
+20/12/21 15:33:26 INFO yarn.Client: 
+         client token: N/A
+         diagnostics: N/A
+         ApplicationMaster host: 192.168.31.147
+         ApplicationMaster RPC port: -1
+         queue: default
+         start time: 1608553997375
+         final status: UNDEFINED
+         tracking URL: http://localhost:8088/proxy/application_1608553977526_0001/
+         user: shaniser
+20/12/21 15:33:26 INFO cluster.YarnClientSchedulerBackend: Application application_1608553977526_0001 has started running.
+20/12/21 15:33:26 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53620.
+20/12/21 15:33:26 INFO netty.NettyBlockTransferService: Server created on 192.168.31.147:53620
+20/12/21 15:33:26 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/12/21 15:33:26 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.31.147, 53620, None)
+20/12/21 15:33:26 INFO storage.BlockManagerMasterEndpoint: Registering block manager 192.168.31.147:53620 with 366.3 MB RAM, BlockManagerId(driver, 192.168.31.147, 53620, None)
+20/12/21 15:33:26 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.31.147, 53620, None)
+20/12/21 15:33:26 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.31.147, 53620, None)
+20/12/21 15:33:26 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+20/12/21 15:33:26 INFO ui.JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /metrics/json.
+20/12/21 15:33:26 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6cbb7a7d{/metrics/json,null,AVAILABLE,@Spark}
+20/12/21 15:33:31 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.31.147:53625) with ID 1
+20/12/21 15:33:31 INFO storage.BlockManagerMasterEndpoint: Registering block manager localhost:53626 with 366.3 MB RAM, BlockManagerId(1, localhost, 53626, None)
+20/12/21 15:33:32 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.31.147:53628) with ID 2
+20/12/21 15:33:32 INFO storage.BlockManagerMasterEndpoint: Registering block manager localhost:53629 with 366.3 MB RAM, BlockManagerId(2, localhost, 53629, None)
+20/12/21 15:33:34 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.31.147:53631) with ID 3
+20/12/21 15:33:34 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+20/12/21 15:33:34 INFO storage.BlockManagerMasterEndpoint: Registering block manager localhost:53632 with 366.3 MB RAM, BlockManagerId(3, localhost, 53632, None)
+20/12/21 15:33:34 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 240.3 KB, free 366.1 MB)
+20/12/21 15:33:35 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.2 KB, free 366.0 MB)
+20/12/21 15:33:35 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.31.147:53620 (size: 23.2 KB, free: 366.3 MB)
+20/12/21 15:33:35 INFO spark.SparkContext: Created broadcast 0 from textFile at AirportFindDelay.java:84
+20/12/21 15:33:35 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 240.3 KB, free 365.8 MB)
+20/12/21 15:33:35 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 23.2 KB, free 365.8 MB)
+20/12/21 15:33:35 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.31.147:53620 (size: 23.2 KB, free: 366.3 MB)
+20/12/21 15:33:35 INFO spark.SparkContext: Created broadcast 1 from textFile at AirportFindDelay.java:85
+20/12/21 15:33:35 INFO mapred.FileInputFormat: Total input paths to process : 1
+20/12/21 15:33:35 INFO mapred.FileInputFormat: Total input paths to process : 1
+20/12/21 15:33:35 INFO spark.SparkContext: Starting job: collectAsMap at AirportFindDelay.java:165
+20/12/21 15:33:35 INFO scheduler.DAGScheduler: Got job 0 (collectAsMap at AirportFindDelay.java:165) with 2 output partitions
+20/12/21 15:33:35 INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (collectAsMap at AirportFindDelay.java:165)
+20/12/21 15:33:35 INFO scheduler.DAGScheduler: Parents of final stage: List()
+20/12/21 15:33:35 INFO scheduler.DAGScheduler: Missing parents: List()
+20/12/21 15:33:35 INFO scheduler.DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[5] at mapToPair at AirportFindDelay.java:89), which has no missing parents
+20/12/21 15:33:35 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.9 KB, free 365.8 MB)
+20/12/21 15:33:35 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.8 KB, free 365.8 MB)
+20/12/21 15:33:35 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.31.147:53620 (size: 2.8 KB, free: 366.3 MB)
+20/12/21 15:33:35 INFO spark.SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1184
+20/12/21 15:33:35 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (MapPartitionsRDD[5] at mapToPair at AirportFindDelay.java:89) (first 15 tasks are for partitions Vector(0, 1))
+20/12/21 15:33:35 INFO cluster.YarnScheduler: Adding task set 0.0 with 2 tasks
+20/12/21 15:33:35 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor 1, partition 0, RACK_LOCAL, 7905 bytes)
+20/12/21 15:33:35 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor 3, partition 1, RACK_LOCAL, 7905 bytes)
+20/12/21 15:33:36 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:53632 (size: 2.8 KB, free: 366.3 MB)
+20/12/21 15:33:36 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:53626 (size: 2.8 KB, free: 366.3 MB)
+20/12/21 15:33:36 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:53632 (size: 23.2 KB, free: 366.3 MB)
+20/12/21 15:33:36 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:53626 (size: 23.2 KB, free: 366.3 MB)
+20/12/21 15:33:38 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 2554 ms on localhost (executor 3) (1/2)
+20/12/21 15:33:38 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2787 ms on localhost (executor 1) (2/2)
+20/12/21 15:33:38 INFO cluster.YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/12/21 15:33:38 INFO scheduler.DAGScheduler: ResultStage 0 (collectAsMap at AirportFindDelay.java:165) finished in 2,864 s
+20/12/21 15:33:38 INFO scheduler.DAGScheduler: Job 0 finished: collectAsMap at AirportFindDelay.java:165, took 2,933054 s
+20/12/21 15:33:38 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 937.8 KB, free 364.9 MB)
+20/12/21 15:33:38 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 84.6 KB, free 364.8 MB)
+20/12/21 15:33:38 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.31.147:53620 (size: 84.6 KB, free: 366.2 MB)
+20/12/21 15:33:38 INFO spark.SparkContext: Created broadcast 3 from broadcast at AirportFindDelay.java:165
+20/12/21 15:33:38 INFO Configuration.deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+20/12/21 15:33:38 INFO io.HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+20/12/21 15:33:38 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+20/12/21 15:33:38 INFO spark.SparkContext: Starting job: runJob at SparkHadoopWriter.scala:78
+20/12/21 15:33:38 INFO scheduler.DAGScheduler: Registering RDD 7 (mapToPair at AirportFindDelay.java:99) as input to shuffle 0
+20/12/21 15:33:38 INFO scheduler.DAGScheduler: Got job 1 (runJob at SparkHadoopWriter.scala:78) with 2 output partitions
+20/12/21 15:33:38 INFO scheduler.DAGScheduler: Final stage: ResultStage 2 (runJob at SparkHadoopWriter.scala:78)
+20/12/21 15:33:38 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+20/12/21 15:33:38 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 1)
+20/12/21 15:33:38 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[7] at mapToPair at AirportFindDelay.java:99), which has no missing parents
+20/12/21 15:33:38 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 6.3 KB, free 364.8 MB)
+20/12/21 15:33:38 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.4 KB, free 364.8 MB)
+20/12/21 15:33:38 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on 192.168.31.147:53620 (size: 3.4 KB, free: 366.2 MB)
+20/12/21 15:33:38 INFO spark.SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1184
+20/12/21 15:33:38 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[7] at mapToPair at AirportFindDelay.java:99) (first 15 tasks are for partitions Vector(0, 1))
+20/12/21 15:33:38 INFO cluster.YarnScheduler: Adding task set 1.0 with 2 tasks
+20/12/21 15:33:38 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, localhost, executor 2, partition 0, RACK_LOCAL, 7893 bytes)
+20/12/21 15:33:38 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, localhost, executor 3, partition 1, RACK_LOCAL, 7893 bytes)
+20/12/21 15:33:38 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:53632 (size: 3.4 KB, free: 366.3 MB)
+20/12/21 15:33:38 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:53632 (size: 23.2 KB, free: 366.2 MB)
+20/12/21 15:33:39 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:53629 (size: 3.4 KB, free: 366.3 MB)
+20/12/21 15:33:39 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:53629 (size: 23.2 KB, free: 366.3 MB)
+20/12/21 15:33:39 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 1276 ms on localhost (executor 3) (1/2)
+20/12/21 15:33:41 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 2653 ms on localhost (executor 2) (2/2)
+20/12/21 15:33:41 INFO cluster.YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/12/21 15:33:41 INFO scheduler.DAGScheduler: ShuffleMapStage 1 (mapToPair at AirportFindDelay.java:99) finished in 2,670 s
+20/12/21 15:33:41 INFO scheduler.DAGScheduler: looking for newly runnable stages
+20/12/21 15:33:41 INFO scheduler.DAGScheduler: running: Set()
+20/12/21 15:33:41 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 2)
+20/12/21 15:33:41 INFO scheduler.DAGScheduler: failed: Set()
+20/12/21 15:33:41 INFO scheduler.DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[11] at saveAsTextFile at AirportFindDelay.java:178), which has no missing parents
+20/12/21 15:33:41 INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 75.3 KB, free 364.7 MB)
+20/12/21 15:33:41 INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 27.4 KB, free 364.7 MB)
+20/12/21 15:33:41 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 192.168.31.147:53620 (size: 27.4 KB, free: 366.1 MB)
+20/12/21 15:33:41 INFO spark.SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1184
+20/12/21 15:33:41 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 2 (MapPartitionsRDD[11] at saveAsTextFile at AirportFindDelay.java:178) (first 15 tasks are for partitions Vector(0, 1))
+20/12/21 15:33:41 INFO cluster.YarnScheduler: Adding task set 2.0 with 2 tasks
+20/12/21 15:33:41 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 2.0 (TID 4, localhost, executor 3, partition 0, NODE_LOCAL, 7673 bytes)
+20/12/21 15:33:41 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 2.0 (TID 5, localhost, executor 1, partition 1, NODE_LOCAL, 7673 bytes)
+20/12/21 15:33:41 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on localhost:53632 (size: 27.4 KB, free: 366.2 MB)
+20/12/21 15:33:41 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 192.168.31.147:53631
+20/12/21 15:33:41 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on localhost:53626 (size: 27.4 KB, free: 366.2 MB)
+20/12/21 15:33:41 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 192.168.31.147:53625
+20/12/21 15:33:41 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:53632 (size: 84.6 KB, free: 366.1 MB)
+20/12/21 15:33:41 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:53626 (size: 84.6 KB, free: 366.2 MB)
+20/12/21 15:33:41 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 2.0 (TID 4) in 727 ms on localhost (executor 3) (1/2)
+20/12/21 15:33:42 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 2.0 (TID 5) in 934 ms on localhost (executor 1) (2/2)
+20/12/21 15:33:42 INFO cluster.YarnScheduler: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+20/12/21 15:33:42 INFO scheduler.DAGScheduler: ResultStage 2 (runJob at SparkHadoopWriter.scala:78) finished in 0,969 s
+20/12/21 15:33:42 INFO scheduler.DAGScheduler: Job 1 finished: runJob at SparkHadoopWriter.scala:78, took 3,670221 s
+20/12/21 15:33:42 INFO io.SparkHadoopWriter: Job job_20201221153338_0011 committed.
+20/12/21 15:33:42 INFO spark.SparkContext: Invoking stop() from shutdown hook
+20/12/21 15:33:42 INFO server.AbstractConnector: Stopped Spark@4d4d48a6{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+20/12/21 15:33:42 INFO ui.SparkUI: Stopped Spark web UI at http://192.168.31.147:4040
+20/12/21 15:33:42 INFO cluster.YarnClientSchedulerBackend: Interrupting monitor thread
+20/12/21 15:33:42 INFO cluster.YarnClientSchedulerBackend: Shutting down all executors
+20/12/21 15:33:42 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+20/12/21 15:33:42 INFO cluster.SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+20/12/21 15:33:42 INFO cluster.YarnClientSchedulerBackend: Stopped
+20/12/21 15:33:42 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/12/21 15:33:42 INFO memory.MemoryStore: MemoryStore cleared
+20/12/21 15:33:42 INFO storage.BlockManager: BlockManager stopped
+20/12/21 15:33:42 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+20/12/21 15:33:42 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/12/21 15:33:42 INFO spark.SparkContext: Successfully stopped SparkContext
+20/12/21 15:33:42 INFO util.ShutdownHookManager: Shutdown hook called
+20/12/21 15:33:42 INFO util.ShutdownHookManager: Deleting directory /private/var/folders/t7/1g88wz7j1nxf02brk14l7gp40000gn/T/spark-fc1eeb24-f64c-424a-b24d-0ea0a689a5c7
+20/12/21 15:33:42 INFO util.ShutdownHookManager: Deleting directory /private/var/folders/t7/1g88wz7j1nxf02brk14l7gp40000gn/T/spark-886dda84-80e6-44bc-a39f-5bba52105c5d
+20/12/21 15:33:43 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
