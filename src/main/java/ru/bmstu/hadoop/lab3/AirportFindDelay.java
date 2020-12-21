@@ -7,5 +7,4 @@ public class AirportFindDelay {
     SparkConf conf = new SparkConf().setAppName("lab3");
     JavaSparkContext sc = new JavaSparkContext(conf);
 
-    
 }
