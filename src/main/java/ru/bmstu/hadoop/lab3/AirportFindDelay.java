@@ -4,6 +4,14 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 
+/*
+Start project
+*start hadoop*
+mvn package
+hadoop -copyFromLocal Airports.csv Flights.csv /
+spark-submit --class ru.bmstu.hadoop.lab3.AirportFindDelay --master yarn-client --num-executors 3
+ */
+
 public class AirportFindDelay {
     private static final String FIRST_STRING = "\"YEAR\"";
     public static final int DELAY_INDEX = 18;
