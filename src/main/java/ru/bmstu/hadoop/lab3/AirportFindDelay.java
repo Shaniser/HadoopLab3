@@ -100,7 +100,7 @@ public class AirportFindDelay {
                     Integer originalAirportId = Integer.parseInt(values[AIRPORT_DELAY_COLUMN_ID]);
                     Integer destinationAirportId = Integer.parseInt(values[AIRPORT_DELAY_COLUMN_ID]);
 
-                    boolean isCanceled = isCanceled(getCancelCode(values[CAN]))
+                    boolean isCanceled = isCanceled(getCancelCode(values[CANCEL_CODE_COLUMN]));
                 });
 
 
