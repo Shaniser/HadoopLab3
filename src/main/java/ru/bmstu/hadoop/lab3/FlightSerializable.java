@@ -3,8 +3,8 @@ package ru.bmstu.hadoop.lab3;
 import scala.Serializable;
 
 public class FlightSerializable implements Serializable {
-    private boolean isCanceled;
-    private float delayTime;
+    private final boolean isCanceled;
+    private final float delayTime;
 
     FlightSerializable(float delayTime, boolean isCanceled) {
         this.delayTime = delayTime;
