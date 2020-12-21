@@ -19,14 +19,14 @@ hadoop fs -copyToLocal output
 public class AirportFindDelay {
     private static final String AIRPORTS_FIRST_STRING = "\"YEAR\"";
     private static final String FLIGHTS_FIRST_STRING = "Code";
-    public static final int DELAY_INDEX = 18;
+    public static final int DELAY_COLUMN = 18;
     public static final int CANCEL_CODE_INDEX = 19;
     public static final int ERROR_CODE = 1;
     public static final int AIRPORT_ID_COLUMN = 0;
     public static final int AIRPORT_NAME_COLUMN = 1;
     public static final int AIRPORT_DELAY_COLUMN_ID = 14;
     public static final float CANCEL_CODE = 1;
-    public static final float CANCEL_CODE_COLUMN = 19;
+    public static final int CANCEL_CODE_COLUMN = 19;
 
     public static final String EMPTY_STR = "";
 
@@ -101,6 +101,10 @@ public class AirportFindDelay {
                     Integer destinationAirportId = Integer.parseInt(values[AIRPORT_DELAY_COLUMN_ID]);
 
                     boolean isCanceled = isCanceled(getCancelCode(values[CANCEL_CODE_COLUMN]));
+                    float delayTime = Float.parseFloat(values[DELAY_COLUMN]);
+
+                    FlightSerializable flightDelayInfo = new FlightSerializable(delayTime, isCanceled);
+                    return new Tuple2<>(new Tuple2<>(destinationAirportId, originalAirportId), flightDelayInfo);
                 });
 
 
