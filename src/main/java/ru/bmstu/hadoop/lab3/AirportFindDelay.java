@@ -4,6 +4,7 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import scala.Int;
 import scala.Serializable;
 import scala.Tuple2;
 
@@ -89,6 +90,9 @@ public class AirportFindDelay {
                     return new Tuple2<>(new Tuple2<>(destinationAirportId, originalAirportId), flightDelayInfo);
                 });
 
+
+        JavaPairRDD<Tuple2<Integer, Integer>, FlightInfo> flightCombined =
+                flightInfo
 
         flightsStr.saveAsTextFile("output");
     }

@@ -36,5 +36,5 @@ public class FlightInfo {
                 info.delayedCount + delayedCount);
     }
 
-    
+
 }
