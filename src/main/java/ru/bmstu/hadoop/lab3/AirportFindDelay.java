@@ -25,6 +25,7 @@ public class AirportFindDelay {
     public static final int ERROR_CODE = 1;
     public static final int AIRPORT_ID_COLUMN = 0;
     public static final int AIRPORT_NAME_COLUMN = 1;
+    public static final int AIRPORT_DELAY_COLUMN_ID = 14;
 
     public static final String EMPTY_STR = "";
 
@@ -87,8 +88,7 @@ public class AirportFindDelay {
                 .filter(str -> !isFlightsFirstLine(str))
                 .mapToPair(str -> {
                     String[] values = getValues(str);
-                    Integer id = Integer.parseInt(removeQuotes(values[AIRPORT_ID_COLUMN]));
-                    String name = values[AIRPORT_NAME_COLUMN];
+                    Integer originalAirportId = Integer.parseInt(values[])
 
                     return new Tuple2<>(id, name);
                 });
