@@ -25,6 +25,7 @@ public class AirportFindDelay {
     public static final int AIRPORT_ID_COLUMN = 0;
     public static final int AIRPORT_NAME_COLUMN = 1;
     public static final int AIRPORT_DELAY_COLUMN_ID = 14;
+    public static final float CANCEL_CODE = 1;
 
     public static final String EMPTY_STR = "";
 
@@ -90,7 +91,7 @@ public class AirportFindDelay {
                     Integer originalAirportId = Integer.parseInt(values[AIRPORT_DELAY_COLUMN_ID]);
                     Integer destinationAirportId = Integer.parseInt(values[AIRPORT_DELAY_COLUMN_ID]);
 
-                    return new Tuple2<>(id, name);
+                    boolean isCanceled =
                 });
 
 
