@@ -58,24 +58,6 @@ public class AirportFindDelay {
         return Float.parseFloat(strCode);
     }
 
-    public static class FlightSerializable implements Serializable {
-        private boolean isCanceled;
-        private float delayTime;
-
-        FlightSerializable(float delayTime, boolean isCanceled) {
-            this.delayTime = delayTime;
-            this.isCanceled = isCanceled;
-        }
-
-        boolean isCanceled() {
-            return isCanceled;
-        }
-
-        public float getDelayTime() {
-            return delayTime;
-        }
-    }
-
     public static void main(String[] args) {
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
@@ -106,7 +88,6 @@ public class AirportFindDelay {
                     FlightSerializable flightDelayInfo = new FlightSerializable(delayTime, isCanceled);
                     return new Tuple2<>(new Tuple2<>(destinationAirportId, originalAirportId), flightDelayInfo);
                 });
-
 
 
         flightsStr.saveAsTextFile("output");
