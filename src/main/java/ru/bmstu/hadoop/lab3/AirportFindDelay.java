@@ -19,8 +19,8 @@ hadoop fs -copyToLocal output
 */
 
 public class AirportFindDelay {
-    private static final String AIRPORTS_FIRST_STRING = "\"YEAR\"";
-    private static final String FLIGHTS_FIRST_STRING = "Code";
+    private static final String FLIGHTS_FIRST_STRING = "\"YEAR\"";
+    private static final String AIRPORTS_FIRST_STRING = "Code";
     public static final int DELAY_COLUMN = 18;
     public static final int CANCEL_CODE_INDEX = 19;
     public static final int ERROR_CODE = 1;
