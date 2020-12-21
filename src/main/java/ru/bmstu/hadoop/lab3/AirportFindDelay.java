@@ -9,7 +9,7 @@ public class AirportFindDelay {
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
-        JavaRDD<String> airports = sc.textFile()
+        JavaRDD<String> airports = sc.textFile('Airports')
 
     }
 }
