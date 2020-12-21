@@ -156,7 +156,8 @@ public class AirportFindDelay {
                                     NEW_STR +
                                     CANCELLED_PERCENT_STR +
                                     cancelledPercent +
-                                    NEW_STR +;
+                                    NEW_STR +
+                                    NEW_STR;
                             return new Tuple2<>(value._1, infoStrBuilder);
                         }
                 );
