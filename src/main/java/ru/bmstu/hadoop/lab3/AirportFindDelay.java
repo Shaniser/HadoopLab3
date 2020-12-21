@@ -44,6 +44,10 @@ public class AirportFindDelay {
         return str.replaceAll(REGEX_QUOTES, EMPTY_STR);
     }
 
+    private static String[] getValues(String str) {
+        return str.split(REGEX_CVS_SPLIT);
+    }
+
     public static class FlightSerializable implements Serializable {
         private boolean isCanceled;
         private float delayTime;
@@ -72,7 +76,7 @@ public class AirportFindDelay {
         JavaPairRDD<Integer, String> flightsStr = airports
                 .filter(str -> !isAirportsFirstLine(str))
                 .mapToPair(str -> {
-                    String[] values = str.split(REGEX_CVS_SPLIT);
+                    String[] values = getValues(str);
                     Integer id = Integer.parseInt(removeQuotes(values[AIRPORT_ID_COLUMN]));
                     String name = values[AIRPORT_NAME_COLUMN];
 
@@ -82,7 +86,7 @@ public class AirportFindDelay {
         JavaPairRDD<Tuple2<Integer, Integer>, FlightSerializable> flightInfo = flights
                 .filter(str -> !isFlightsFirstLine(str))
                 .mapToPair(str -> {
-                    String[] values = str.split(REGEX_CVS_SPLIT);
+                    String[] values = getValues(str);
                     Integer id = Integer.parseInt(removeQuotes(values[AIRPORT_ID_COLUMN]));
                     String name = values[AIRPORT_NAME_COLUMN];
 
