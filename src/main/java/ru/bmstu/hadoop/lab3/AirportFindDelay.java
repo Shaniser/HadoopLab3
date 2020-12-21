@@ -45,7 +45,7 @@ public class AirportFindDelay {
         JavaRDD<String> airports = sc.textFile("/Airports.csv");
         JavaRDD<String> flights = sc.textFile("/Flights.csv");
 
-        JavaPairRDD<Integer, String> flightsStr = airports
+        JavaPairRDD<Integer, String> flightsStr = flights
                 .filter(str -> !isFirstLine(str))
                 .mapToPair(str -> {
                     String[] values = str.split(REGEX_CVS_SPLIT);
