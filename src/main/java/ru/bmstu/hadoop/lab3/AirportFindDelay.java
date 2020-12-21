@@ -162,7 +162,7 @@ public class AirportFindDelay {
                     String from = name.get(value._1._1);
                     String to = name.get(value._1._2);
 
-                    return
+                    return FROM_STR + from + TO_STR + to + NEW_STR + value._2;
                 }
         )
 
