@@ -17,7 +17,8 @@ hadoop fs -copyToLocal output
 */
 
 public class AirportFindDelay {
-    private static final String FIRST_STRING = "\"YEAR\"";
+    private static final String AIRPORTS_FIRST_STRING = "\"YEAR\"";
+    private static final String FLIGHTS_FIRST_STRING = "Code";
     public static final int DELAY_INDEX = 18;
     public static final int CANCEL_CODE_INDEX = 19;
     public static final int ID_INDEX = 14;
@@ -32,7 +33,7 @@ public class AirportFindDelay {
     public static final String REGEX_CVS_SPLIT = ",";
 
     private static boolean isFirstLine(String str) {
-        return str.contains(FIRST_STRING);
+        return str.contains(AIRPORTS_FIRST_STRING);
     }
 
     private static String removeQuotes(String str) {
@@ -74,7 +75,7 @@ public class AirportFindDelay {
                     return new Tuple2<>(id, name);
                 });
 
-        JavaPairRDD<Tuple2<Integer, Integer>> flightsStr = airports
+        JavaPairRDD<Tuple2<Integer, Integer>, FlightSerializable> flightInfo = flights
                 .filter(str -> !isFirstLine(str))
                 .mapToPair(str -> {
                     String[] values = str.split(REGEX_CVS_SPLIT);
