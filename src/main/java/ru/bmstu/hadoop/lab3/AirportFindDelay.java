@@ -10,7 +10,7 @@ Start project
 mvn package
 hadoop -copyFromLocal Airports.csv Flights.csv /
 spark-submit --class ru.bmstu.hadoop.lab3.AirportFindDelay --master yarn-client --num-executors 3 /Users/shaniser/Desktop/Hadoop/HadoopLab3/target/spark-examples-1.0-SNAPSHOT.jar
-hadoop s -copyToLocal /outputTest
+hadoop fs -copyToLocal /outputTest
  */
 
 public class AirportFindDelay {
