@@ -73,6 +73,10 @@ public class AirportFindDelay {
         return Float.parseFloat(strCode);
     }
 
+    private static float getDelayTime(String str) {
+        return str.isEmpty() ? 0 : Float.parseFloat(str);
+    }
+
     public static void main(String[] args) {
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
@@ -98,7 +102,7 @@ public class AirportFindDelay {
                     Integer destinationAirportId = Integer.parseInt(values[AIRPORT_DELAY_COLUMN_ID]);
 
                     boolean isCanceled = isCanceled(getCancelCode(values[CANCEL_CODE_COLUMN]));
-                    float delayTime = Float.parseFloat(values[DELAY_COLUMN]);
+                    float delayTime = getDelayTime(values[DELAY_COLUMN]);
 
                     FlightSerializable flightDelayInfo = new FlightSerializable(delayTime, isCanceled);
                     return new Tuple2<>(new Tuple2<>(destinationAirportId, originalAirportId), flightDelayInfo);
