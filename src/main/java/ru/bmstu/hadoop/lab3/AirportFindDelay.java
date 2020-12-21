@@ -28,6 +28,7 @@ public class AirportFindDelay {
     public static final int AIRPORT_DELAY_COLUMN_ID = 14;
     public static final float CANCEL_CODE = 1;
     public static final int CANCEL_CODE_COLUMN = 19;
+    public static final float ZERO_TIME = 0;
 
     public static final String EMPTY_STR = "";
 
@@ -96,7 +97,8 @@ public class AirportFindDelay {
                         value -> new FlightInfo(
                                 value.getDelayTime(),
                                 1,
-                                value.
+                                value.isCanceled() ? 1 : 0,
+                                value.getDelayTime() >
                         )
                 )
 
