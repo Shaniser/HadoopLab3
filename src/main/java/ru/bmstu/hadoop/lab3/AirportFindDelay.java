@@ -4,6 +4,7 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import scala.Tuple2;
 
 /*
 Start project
@@ -21,6 +22,7 @@ public class AirportFindDelay {
     public static final int ID_INDEX = 14;
     public static final int ERROR_CODE = 1;
     public static final int AIRPORT_ID_COLUMN = 0;
+    public static final int AIRPORT_NAME_COLUMN = 0;
 
     public static final String EMPTY_STR = "";
 
@@ -47,7 +49,10 @@ public class AirportFindDelay {
                 .filter(str -> !isFirstLine(str))
                 .mapToPair(str -> {
                     String[] values = str.split(REGEX_CVS_SPLIT);
-                    Integer id = Integer.parseInt(removeQuotes(values[id]))
+                    Integer id = Integer.parseInt(removeQuotes(values[AIRPORT_ID_COLUMN]));
+                    String name = values[AIRPORT_NAME_COLUMN];
+
+                    return new Tuple2<>(id, name);
                 })
 
 
