@@ -164,6 +164,6 @@ public class AirportFindDelay {
                 }
         );
 
-        airportInfo.saveAsTextFile("output");
+        outputInfo.saveAsTextFile("output");
     }
 }
