@@ -131,19 +131,19 @@ public class AirportFindDelay {
                                 cancelledPercent = (float) value._2.getCancelledCount() / value._2.getFlightCount() * maxPercent;
                             }
 
-                            StringBuilder infoStrBuilder = new StringBuilder();
-                            infoStrBuilder.append(MAX_DELAY_STR);
-                            infoStrBuilder.append(value._2.getMaxDelay());
-                            infoStrBuilder.append(FLIGHTS_STR);
-                            infoStrBuilder.append(value._2.getFlightCount());
-                            infoStrBuilder.append(FLIGHTS_CANCELLED_STR);
-                            infoStrBuilder.append(value._2.getCancelledCount());
-                            infoStrBuilder.append(FLIGHTS_DELAYED_STR);
-                            infoStrBuilder.append(value._2.getMaxDelay());
-                            infoStrBuilder.append(DELAYED_PERCENT_STR);
-                            infoStrBuilder.append(delayedPercent);
-                            infoStrBuilder.append(CANCELLED_PERCENT_STR);
-                            infoStrBuilder.append(cancelledPercent);
+                            String infoStrBuilder = MAX_DELAY_STR +
+                                    value._2.getMaxDelay() +
+                                    FLIGHTS_STR +
+                                    value._2.getFlightCount() +
+                                    FLIGHTS_CANCELLED_STR +
+                                    value._2.getCancelledCount() +
+                                    FLIGHTS_DELAYED_STR +
+                                    value._2.getMaxDelay() +
+                                    DELAYED_PERCENT_STR +
+                                    delayedPercent +
+                                    CANCELLED_PERCENT_STR +
+                                    cancelledPercent;
+                            return new Tuple2<>(value._1, infoStrBuilder);
                         }
                 )
 
