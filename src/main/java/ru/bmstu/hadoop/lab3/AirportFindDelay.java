@@ -96,7 +96,7 @@ public class AirportFindDelay {
                         value -> new FlightInfo(
                                 value.getDelayTime(),
                                 1,
-                                value.
+                                value.get
                         )
                 )
 
