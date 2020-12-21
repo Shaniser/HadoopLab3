@@ -26,6 +26,7 @@ public class AirportFindDelay {
     public static final int AIRPORT_NAME_COLUMN = 1;
     public static final int AIRPORT_DELAY_COLUMN_ID = 14;
     public static final float CANCEL_CODE = 1;
+    public static final float CANCEL_CODE_COLUMN = 19;
 
     public static final String EMPTY_STR = "";
 
@@ -99,7 +100,7 @@ public class AirportFindDelay {
                     Integer originalAirportId = Integer.parseInt(values[AIRPORT_DELAY_COLUMN_ID]);
                     Integer destinationAirportId = Integer.parseInt(values[AIRPORT_DELAY_COLUMN_ID]);
 
-                    boolean isCanceled = isCanceled()
+                    boolean isCanceled = isCanceled(getCancelCode(values[CAN]))
                 });
 
 
