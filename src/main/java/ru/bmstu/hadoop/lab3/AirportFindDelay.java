@@ -40,6 +40,10 @@ public class AirportFindDelay {
     // Strings
     public static final String MAX_DELAY_STR = "Max delay is ";
     public static final String FLIGHTS_STR = "Flights count is ";
+    public static final String FLIGHTS_CANCELLED_STR = "Cancelled flights count is ";
+    public static final String FLIGHTS_DELAYED_STR = "Delayed flights count is ";
+    public static final String DELAYED_PERCENT_STR = "Delayed flights percent is ";
+    public static final String CANCELLED_PERCENT_STR = "Cancelled flights percent is ";
 
     private static boolean isAirportsFirstLine(String str) {
         return str.contains(AIRPORTS_FIRST_STRING);
