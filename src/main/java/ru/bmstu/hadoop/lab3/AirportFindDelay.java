@@ -92,7 +92,13 @@ public class AirportFindDelay {
 
 
         JavaPairRDD<Tuple2<Integer, Integer>, FlightInfo> flightCombined =
-                flightInfo
+                flightInfo.combineByKey(
+                        value -> new FlightInfo(
+                                value.getDelayTime(),
+                                1,
+                                value.
+                        )
+                )
 
         flightsStr.saveAsTextFile("output");
     }
