@@ -1,6 +1,6 @@
 package ru.bmstu.hadoop.lab3;
 
-import scala.Serializable;
+import java.io.Serializable;
 
 public class FlightSerializable implements Serializable {
     private final boolean isCanceled;
