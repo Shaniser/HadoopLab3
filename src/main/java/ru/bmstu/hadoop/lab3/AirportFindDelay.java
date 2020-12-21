@@ -20,6 +20,9 @@ public class AirportFindDelay {
     public static final int ID_INDEX = 14;
     public static final int ERROR_CODE = 1;
 
+    public static final String EMPTY_STR = "";
+
+    // Regexes
     public static final String REGEX_QUOTES = "^\"+|\"+$";
     public static final String REGEX_CVS_SPLIT = ",";
 
