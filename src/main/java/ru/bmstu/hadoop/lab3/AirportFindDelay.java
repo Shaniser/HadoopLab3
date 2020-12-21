@@ -164,7 +164,7 @@ public class AirportFindDelay {
 
                     return FROM_STR + from + TO_STR + to + NEW_STR + value._2;
                 }
-        )
+        );
 
         airportInfo.saveAsTextFile("output");
     }
