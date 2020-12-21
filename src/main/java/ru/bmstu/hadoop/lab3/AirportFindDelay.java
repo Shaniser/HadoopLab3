@@ -98,8 +98,9 @@ public class AirportFindDelay {
                                 value.getDelayTime(),
                                 1,
                                 value.isCanceled() ? 1 : 0,
-                                value.getDelayTime() >
-                        )
+                                value.getDelayTime() > ZERO_TIME ? 1 : 0
+                        ),
+                        (flight, value) -> FlightInfo.add()
                 )
 
         flightsStr.saveAsTextFile("output");
