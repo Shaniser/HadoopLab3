@@ -47,6 +47,14 @@ public class AirportFindDelay {
             this.delayTime = delayTime;
             this.isCanceled = isCanceled;
         }
+
+        boolean isCanceled() {
+            return isCanceled;
+        }
+
+        public float getDelayTime() {
+            return delayTime;
+        }
     }
 
     public static void main(String[] args) {
